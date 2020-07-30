@@ -29,7 +29,7 @@ For example:<br>
     end
 ~~~
 <br>
-is NOT a valid Flex++ program and WILL NOT be interpreted correctly.<br>
+is **NOT** a valid Flex++ program and **WILL NOT** be interpreted correctly.<br>
 
 The correct usage is:
 ~~~
@@ -69,7 +69,7 @@ whitespace inbetween the members, therefore:<br>
 ~~~
 
 <br>
-is NOT allowed.<br>
+is **NOT** allowed.<br>
 
 As of now, a Flex++ program as a whole is a single block and every "if" and "while" statement
 also has to be followed by a block.<br><br>
@@ -91,17 +91,17 @@ For example:<br>
 
 Assignment is done in the most common way across programming languages:<br>
 ~~~
-    |var_name| = |value|<br>
+    |var_name| = |value|
 ~~~
 
 The keywords "print" and "printc" are used respectively for printing a numeric value and a character.<br>
 For example:<br>
 
 ~~~
-    set space = 32<br>
-    print space<br>
-    printc space<br>
-    print space<br>
+    set space = 32
+    print space
+    printc space
+    print space
 ~~~
 <br>
 
@@ -115,9 +115,9 @@ Explanation: 32 is the ASCII value of a 'space' character, therefore 'print spac
 The argument we give to the "print/printc" keyword can be followed by the "eol"(End of line) keyword. It basically prints a newline character<br>
 For example:
 ~~~
-    set space = 32<br>
-    print space eol<br>
-    print space eol<br>
+    set space = 32
+    print space eol
+    print space eol
 ~~~
 <br>
 
