@@ -42,12 +42,14 @@ The correct usage is:
 <br>
 "begin" and "end" are used to denote the beggining and the end of a block<br><br>
 For example:<br>
+
 ~~~
     begin
     ...
     end
 ~~~
 <br>
+
 Variables are declared using the "set" keyword. For the interpreter, every variable is of type "double",
 therefore only numerical expressions can be evaluated by the interpreter<br>
 For example:<br>
