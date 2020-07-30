@@ -31,14 +31,14 @@ For example:<br>
 is NOT a valid Flex++ program and WILL NOT be interpreted correctly.<br>
 
 The correct usage is:
-<code>
+~~~
     begin<br>
-        set a = 3<br>
-        set b = 9<br>
-        a = b<br>
-    end<br>
-</code><br>
-
+        set a = 3
+        set b = 9
+        a = b
+    end
+~~~
+<br>
 "begin" and "end" are used to denote the beggining and the end of a block<br><br>
 For example:<br>
 <code>
