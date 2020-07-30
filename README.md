@@ -47,7 +47,7 @@ For example:<br>
     ...
     end
 ~~~
-
+<br>
 Variables are declared using the "set" keyword. For the interpreter, every variable is of type "double",
 therefore only numerical expressions can be evaluated by the interpreter<br>
 For example:<br>
@@ -136,8 +136,8 @@ set b = 3*a
 ~~~
 ...is invalid as it will produce the following expression: <code>3*-4</code><br>
 This expression will **NOT** be correctly parsed by the interpreter. To avoid this issue, you may put the variable in front of the other
-parts of the expression: <code>set b = a*3</code><br>
-...which will produce the following expression: <code>-4*3</code><br>
+parts of the expression: <code>set b = a\*3</code><br>
+...which will produce the following expression: <code>-4\*3</code><br>
 This expression **WILL BE** correctly parsed by the interpreter.<br>
 
 Another option is to put the variable into parentheses in the expression itself.<br>
