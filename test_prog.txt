@@ -1,0 +1,22 @@
+begin
+	set alpha = 10
+	set b = (alpha+16/2)*4+15-100/2
+
+	while: b > 0 begin
+		print b eol
+		b = b-1
+	end
+
+	set var = 32
+
+	if: var != 34 begin
+		printc 'a' eol
+		var = var-4
+
+		if: var >= 31 begin
+			printc 'b' eol
+		end
+	end
+
+	print 34982
+end
