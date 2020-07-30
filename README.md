@@ -29,6 +29,7 @@ For example:<br>
     end
 ~~~
 <br>
+
 is **NOT** a valid Flex++ program and **WILL NOT** be interpreted correctly.<br>
 
 The correct usage is:
@@ -69,6 +70,7 @@ whitespace inbetween the members, therefore:<br>
 ~~~
 
 <br>
+
 is **NOT** allowed.<br>
 
 As of now, a Flex++ program as a whole is a single block and every "if" and "while" statement
