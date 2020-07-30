@@ -5,7 +5,7 @@ completely bug-free, but overall it can be used to its full potential. The inter
 lexer and recursive-descent parser to tokenize and parse the Flex++ code. Refer to the documentation below to
 learn more about the Flex++ language.<br><br>
 
-**USAGE**: fppi.exe |src_code_dir|<br>
+**USAGE**: ```fppi.exe <src_code_dir>```<br>
 
 **DOCUMENTATION**:<br>
 As of version Flex++20(following the C++ standard naming) the language has 8 keywords:<br>
