@@ -7,7 +7,7 @@ learn more about the Flex++ language.<br><br>
 
 **USAGE**: fppi.exe |src_code_dir|<br>
 
-**DOCUMENTATION**<br>
+**DOCUMENTATION**:<br>
 As of version Flex++20(following the C++ standard naming) the language has 8 keywords:<br>
     -"begin"<br>
     -"end"<br>
@@ -53,7 +53,7 @@ For example:<br>
 
 <code>
     set var = 3<br>
-    set a = 3\*4+var<br>
+    set a = 3*4+var<br>
     set var = 3/(var-2)+3<br>
 </code><br>
 
@@ -62,7 +62,7 @@ whitespace inbetween the members, therefore:<br>
 
 <code>
     set smth = 90 + 4<br>
-    set incorrect = 3 + 4 + 9 \* 3 / smth<br>
+    set incorrect = 3 + 4 + 9 * 3 / smth<br>
 </code><br>
 
 is NOT allowed.<br>
