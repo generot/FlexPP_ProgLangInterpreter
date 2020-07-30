@@ -27,7 +27,7 @@ For example:<br>
         set b=9<br>
         a=b<br>
     end<br>
-</code>
+</code><br>
 is NOT a valid Flex++ program and WILL NOT be interpreted correctly.<br>
 
 The correct usage is:
@@ -37,7 +37,7 @@ The correct usage is:
         set b = 9<br>
         a = b<br>
     end<br>
-</code>
+</code><br>
 
 "begin" and "end" are used to denote the beggining and the end of a block<br><br>
 For example:<br>
@@ -45,7 +45,7 @@ For example:<br>
     begin<br>
     ...<br>
     end<br>
-</code>
+</code><br>
 
 Variables are declared using the "set" keyword. For the interpreter, every variable is of type "double",
 therefore only numerical expressions can be evaluated by the interpreter<br>
@@ -55,7 +55,7 @@ For example:<br>
     set var = 3<br>
     set a = 3\*4+var<br>
     set var = 3/(var-2)+3<br>
-</code>
+</code><br>
 
 Because of the limitations of the current lexer, numerical expressions should always be written without any
 whitespace inbetween the members, therefore:<br>
@@ -63,7 +63,7 @@ whitespace inbetween the members, therefore:<br>
 <code>
     set smth = 90 + 4<br>
     set incorrect = 3 + 4 + 9 \* 3 / smth<br>
-</code>
+</code><br>
 
 is NOT allowed.<br>
 
@@ -75,18 +75,18 @@ For example:<br>
     if: var >= a begin<br>
     ...<br>
     end<br>
-</code>
+</code><br>
 
 <code>
     while: var < a begin<br>
     ...<br>
     end<br>
-</code>
+</code><br>
 
 Assignment is done in the most common way across programming languages:<br>
 <code>
     |var_name| = |value|<br>
-</code>
+</code><br>
 
 The keywords "print" and "printc" are used respectively for printing a numeric value and a character.<br>
 For example:<br>
@@ -96,7 +96,7 @@ For example:<br>
     print space<br>
     printc space<br>
     print space<br>
-</code>
+</code><br>
 
 Output: 32 32<br>
 Explanation: 32 is the ASCII value of a 'space' character, therefore 'print space' prints 32 and 'printc space' prints a space character.<br>
@@ -107,7 +107,7 @@ For example:
     set space = 32<br>
     print space eol<br>
     print space eol<br>
-</code>
+</code><br>
 Output:<br>
 32<br>
 32<br><br>
