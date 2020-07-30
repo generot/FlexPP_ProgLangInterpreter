@@ -21,18 +21,19 @@ As of version Flex++20(following the C++ standard naming) the language has 8 key
 It should be noted that it is obligatory for a Flex++ program source code to have some kind of whitespace in front of<br>
 everything that is not a numerical expression.<br>
 For example:<br>
-<code>
-    begin<br>
-        set a=3<br>
-        set b=9<br>
-        a=b<br>
-    end<br>
-</code><br>
+~~~
+    begin
+        set a=3
+        set b=9
+        a=b
+    end
+~~~
+<br>
 is NOT a valid Flex++ program and WILL NOT be interpreted correctly.<br>
 
 The correct usage is:
 ~~~
-    begin<br>
+    begin
         set a = 3
         set b = 9
         a = b
@@ -41,79 +42,111 @@ The correct usage is:
 <br>
 "begin" and "end" are used to denote the beggining and the end of a block<br><br>
 For example:<br>
-<code>
-    begin<br>
-    ...<br>
-    end<br>
-</code><br>
+~~~
+    begin
+    ...
+    end
+~~~
 
 Variables are declared using the "set" keyword. For the interpreter, every variable is of type "double",
 therefore only numerical expressions can be evaluated by the interpreter<br>
 For example:<br>
 
-<code>
-    set var = 3<br>
-    set a = 3*4+var<br>
-    set var = 3/(var-2)+3<br>
-</code><br>
-
+~~~
+    set var = 3
+    set a = 3*4+var
+    set var = 3/(var-2)+3
+~~~
+<br>
 Because of the limitations of the current lexer, numerical expressions should always be written without any
 whitespace inbetween the members, therefore:<br>
 
-<code>
-    set smth = 90 + 4<br>
-    set incorrect = 3 + 4 + 9 * 3 / smth<br>
-</code><br>
+~~~
+    set smth = 90 + 4
+    set incorrect = 3 + 4 + 9 * 3 / smth
+~~~
 
+<br>
 is NOT allowed.<br>
 
 As of now, a Flex++ program as a whole is a single block and every "if" and "while" statement
 also has to be followed by a block.<br><br>
 For example:<br>
 
-<code>
-    if: var >= a begin<br>
-    ...<br>
-    end<br>
-</code><br>
+~~~
+    if: var >= a begin
+    ...
+    end
+~~~
+<br>
 
-<code>
-    while: var < a begin<br>
-    ...<br>
-    end<br>
-</code><br>
+~~~
+    while: var < a begin
+    ...
+    end
+~~~
+<br>
 
 Assignment is done in the most common way across programming languages:<br>
-<code>
+~~~
     |var_name| = |value|<br>
-</code><br>
+~~~
 
 The keywords "print" and "printc" are used respectively for printing a numeric value and a character.<br>
 For example:<br>
 
-<code>
+~~~
     set space = 32<br>
     print space<br>
     printc space<br>
     print space<br>
-</code><br>
+~~~
+<br>
 
-Output: 32 32<br>
+~~~
+Output: 32 32
+~~~
+<br>
+
 Explanation: 32 is the ASCII value of a 'space' character, therefore 'print space' prints 32 and 'printc space' prints a space character.<br>
 
 The argument we give to the "print/printc" keyword can be followed by the "eol"(End of line) keyword. It basically prints a newline character<br>
 For example:
-<code>
+~~~
     set space = 32<br>
     print space eol<br>
     print space eol<br>
-</code><br>
-Output:<br>
-32<br>
-32<br><br>
+~~~
+<br>
+
+~~~
+Output:
+32
+32
+~~~
+<br>
 
 You can refer to test_prog.txt to see how a Flex++ program looks.<br>
 
+**IMPORTANT**: Mathematical expressions using variables are resolved with the help of a preprocessor-like algorithm,
+meaning that the following source code:<br>
+~~~
+set a = -4
+set b = 3*a
+~~~
+...is invalid as it will produce the following expression: <code>3*-4</code><br>
+This expression will **NOT** be correctly parsed by the interpreter. To avoid this issue, you may put the variable in front of the other
+parts of the expression: <code>set b = a*3</code><br>
+...which will produce the following expression: <code>-4*3</code><br>
+This expression **WILL BE** correctly parsed by the interpreter.<br>
 
+Another option is to put the variable into parentheses in the expression itself.<br>
+For example:<br>
+~~~
+set a = -4
+set b = 3*(a)
+~~~
+<br>
 
+This **WILL PRODUCE** the correct mathematical expression as well: <code>3*(-4)</code><br>...which will be parsed correctly.
 
