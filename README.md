@@ -41,7 +41,7 @@ The correct usage is:
     end
 ~~~
 <br>
-"begin" and "end" are used to denote the beggining and the end of a block<br><br>
+"begin" and "end" are used to denote the beginning and the end of a block<br><br>
 For example:<br>
 
 ~~~
